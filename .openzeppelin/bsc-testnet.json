@@ -1,0 +1,248 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x2a3e2e3E49093Aba66Da5aaB56d292Ff2241ac2D",
+    "txHash": "0x4b9dae06aef70ab36dc5f140744a41ed8a65b6083ca5c1deb1f5974ad35ba2e8"
+  },
+  "proxies": [
+    {
+      "address": "0x55adEFbc55cDb7Bc83eA2AA6e99eA87Ddb698758",
+      "txHash": "0xe5de9ae92b08d90a4d6a96e9e4195d613d545e80905eb82eec542b980bdc18c3",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "fd988e73190cad53c48e3504da8e49652e59a3b0d93aff1b6d5ab5a39d308ff9": {
+      "address": "0x39004b32d34768fA29d2adD6579CEF352d7172b0",
+      "txHash": "0x3e6e40b3193430ed8ef26e76efeceb379b73cc97e62e740dd5dec80a90f41399",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:63",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:68"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "requestCount",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_uint256",
+            "contract": "GFTrain",
+            "src": "contracts\\GFTrain.sol:34"
+          },
+          {
+            "label": "trainRequests",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_uint256,t_struct(TrainRequest)726_storage)",
+            "contract": "GFTrain",
+            "src": "contracts\\GFTrain.sol:36"
+          },
+          {
+            "label": "trainedModels",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_mapping(t_uint256,t_struct(TrainedModel)737_storage)",
+            "contract": "GFTrain",
+            "src": "contracts\\GFTrain.sol:37"
+          },
+          {
+            "label": "roles",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_mapping(t_address,t_enum(Roles)712)",
+            "contract": "GFTrain",
+            "src": "contracts\\GFTrain.sol:38"
+          },
+          {
+            "label": "Relay",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_address",
+            "contract": "GFTrain",
+            "src": "contracts\\GFTrain.sol:40"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes_storage": {
+            "label": "bytes",
+            "numberOfBytes": "32"
+          },
+          "t_enum(RequestStatus)709": {
+            "label": "enum GFTrain.RequestStatus",
+            "members": [
+              "Invalid",
+              "Pending",
+              "Processed",
+              "Cancelled"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_enum(Roles)712": {
+            "label": "enum GFTrain.Roles",
+            "members": [
+              "Invalid",
+              "GFTrainer"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_enum(Roles)712)": {
+            "label": "mapping(address => enum GFTrain.Roles)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(TrainRequest)726_storage)": {
+            "label": "mapping(uint256 => struct GFTrain.TrainRequest)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(TrainedModel)737_storage)": {
+            "label": "mapping(uint256 => struct GFTrain.TrainedModel)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(TrainRequest)726_storage": {
+            "label": "struct GFTrain.TrainRequest",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "fee",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "nonce",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "data",
+                "type": "t_bytes_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "isProcessed",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(RequestStatus)709",
+                "offset": 1,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(TrainedModel)737_storage": {
+            "label": "struct GFTrain.TrainedModel",
+            "members": [
+              {
+                "label": "modelMetaInfo",
+                "type": "t_bytes_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "modelName",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "modelType",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "timeTook",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "updatedBy",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}
